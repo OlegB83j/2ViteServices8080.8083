@@ -1,0 +1,16 @@
+{
+  "name": "vite-testing-repo",
+  "private": true,
+  "scripts": {
+    "dev:8080": "npm run dev --workspace=service-1",
+    "dev:8093": "npm run dev --workspace=service-2",
+    "dev": "concurrently \"npm run dev:8080\" \"npm run dev:8093\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "service-1",
+    "service-2"
+  ]
+}
