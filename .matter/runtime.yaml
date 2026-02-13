@@ -1,0 +1,15 @@
+before-command: |
+  #!/bin/bash
+  set -e
+
+  npm install
+preview-commands:
+  - id: vite-service-2
+    title: Service 2
+    description: Starts Vite dev server for Service 2 on port 8093
+    command: |
+      #!/bin/bash
+      set -e
+
+      npm run dev:8093
+preview-port: 8093
